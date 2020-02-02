@@ -17,15 +17,12 @@ int main() {
 	if(delx)
 		m = dely / delx;
 	else
-		m = 0;
-	if(abs(m) < 1)
 		return 0;
-
 	p = 2*dely - delx;
 	x1 = x0;
 	y1 = y0;
 	initgraph(&gd,&gm,NULL);
-	while((x1 != xn) && (y1 != yn)) {
+	while((x1 != xn) || (y1 != yn)) {
 		if(p <= 0) {
 			p = p + 2*dely;
 			x1 = x1 + 1;
